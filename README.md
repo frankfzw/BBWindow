@@ -1,12 +1,12 @@
 BBWindow
 ========
 
-How to Run: 
+How to Run it in Windows
 
-1. download the vlc from http://www.videolan.org/vlc/download-sources.html
+1. Download the vlc from http://www.videolan.org/vlc/download-sources.html
    and vlc-qt from http://projects.tano.si/vlc-qt
 
-2. change the *.pro file 
+2. Change the *.pro file 
 
    add these codes:
    
@@ -16,7 +16,7 @@ How to Run:
        
        CONFIG += release
 
-3. build the project
+3. Build the project
 
 4. Copy the vlc-qt-widgets.dll and vlc-qt.dll files from the directory of vlc-qt\bin into the build folder.
    Copy the libraries(all *.dll) and plugins directory from your vlc download into the build folder.
