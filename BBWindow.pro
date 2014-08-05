@@ -3,6 +3,7 @@
 # Project created by QtCreator 2014-08-03T22:31:33
 #
 #-------------------------------------------------
+# THE INCLUDEPATH AND LIBS SHOULD BE CHANGED BEFORE BUILDED
 
 QT       += core gui
 
@@ -18,3 +19,10 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+INCLUDEPATH += F:\Github\BBWindow\vlc
+
+LIBS     += -LE:\Qt\vlc-qt\lib -lvlc-qt -lvlc-qt-widgets
+INCLUDEPATH += E:\Qt\vlc-qt\include
+
+CONFIG += release
