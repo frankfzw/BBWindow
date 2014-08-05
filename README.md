@@ -7,9 +7,13 @@ How to Run:
    and vlc-qt from http://projects.tano.si/vlc-qt
 
 2. change the *.pro file 
+
    add these codes:
+   
        LIBS += -L/*your vlc-qt lib*/ -lvlc-qt -lvlc-qt-widgets
+       
        INCLUDEPATH += /*your qt include folder*/
+       
        CONFIG += release
 
 3. build the project
