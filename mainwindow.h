@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
+
+#include "socket.h"
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +25,8 @@ public:
 private slots:
     void openLocal();
     void openUrl();
+    void setCarAddr();
+
     void cameraDown();
     void cameraUp();
     void cameraLeft();
@@ -30,8 +35,17 @@ private slots:
     void carRight();
     void carForward();
     void carBack();
+    void cameraDownRelease();
+    void cameraUpRelease();
+    void cameraLeftRelease();
+    void cameraRightRelease();
+    void carLeftRelease();
+    void carRightRelease();
+    void carForwardRelease();
+    void carBackRelease();
 
-
+protected:
+    void keyPressEvent(QKeyEvent *e);
 
 private:
     Ui::MainWindow *ui;
@@ -39,6 +53,9 @@ private:
     VlcInstance *_instance;
     VlcMedia *_media;
     VlcMediaPlayer *_player;
+
+    //socket
+    MsgSender *sender;
 };
 
 #endif // MAINWINDOW_H

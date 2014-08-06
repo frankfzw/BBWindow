@@ -56,7 +56,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>L</string>
+     <string>A</string>
     </property>
    </widget>
    <widget class="QPushButton" name="carForward">
@@ -69,7 +69,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>F</string>
+     <string>W</string>
+    </property>
+    <property name="shortcut">
+     <string comment="w"/>
     </property>
    </widget>
    <widget class="QPushButton" name="carBack">
@@ -82,7 +85,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>B</string>
+     <string>S</string>
     </property>
    </widget>
    <widget class="QPushButton" name="carRight">
@@ -95,7 +98,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>R</string>
+     <string>D</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelCamera">
@@ -121,7 +124,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>U</string>
+     <string>I</string>
     </property>
    </widget>
    <widget class="QPushButton" name="cameraLeft">
@@ -134,7 +137,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>L</string>
+     <string>J</string>
     </property>
    </widget>
    <widget class="QPushButton" name="cameraDown">
@@ -147,7 +150,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D</string>
+     <string>K</string>
     </property>
    </widget>
    <widget class="QPushButton" name="cameraRight">
@@ -160,8 +163,59 @@
      </rect>
     </property>
     <property name="text">
-     <string>R</string>
+     <string>L</string>
     </property>
+   </widget>
+   <widget class="QFrame" name="statusFrame">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>480</y>
+      <width>181</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="ipLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>141</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Car IP:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>141</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Speed:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -180,7 +234,14 @@
     <addaction name="actionOpen_Local_File"/>
     <addaction name="actionOpen_URL"/>
    </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <addaction name="actionCar_Address"/>
+   </widget>
    <addaction name="menuOpen"/>
+   <addaction name="menuSetting"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -199,6 +260,11 @@
   <action name="actionOpen_URL">
    <property name="text">
     <string>Open URL</string>
+   </property>
+  </action>
+  <action name="actionCar_Address">
+   <property name="text">
+    <string>Car Address</string>
    </property>
   </action>
  </widget>
