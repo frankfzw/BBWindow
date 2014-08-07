@@ -22,9 +22,9 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-INCLUDEPATH += F:\Github\BBWindow\vlc
+LIBS        += -lvlc-qt -lvlc-qt-widgets
 
-LIBS     += -LE:\Qt\vlc-qt\lib -lvlc-qt -lvlc-qt-widgets
-INCLUDEPATH += E:\Qt\vlc-qt\include
+LIBS     += -L/home/frank/bb/vlc-qt/lib -lvlc-qt -lvlc-qt-widgets
+INCLUDEPATH += /home/frank/bb/vlc-qt/include
 
 CONFIG += release

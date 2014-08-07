@@ -3,12 +3,10 @@
 
 #include <string>
 
-//version for windows
-#include <winsock.h>
-// Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
-#pragma comment (lib, "Ws2_32.lib")
-#pragma comment (lib, "Mswsock.lib")
-#pragma comment (lib, "AdvApi32.lib")
+//version for linux
+#include <sys/socket.h>
+#include <arpa/inet.h>
+
 
 #define BUFSIZE 512
 
@@ -22,30 +20,30 @@
 #define CAMERALEFT "g"
 #define CAMERARIGHT "h"
 
-//version for windows
+//version for linux
 class MsgSender
 {
 private:
-    SOCKET fd;
+    int fd;
     int port;
     struct sockaddr_in addr;
 public:
     MsgSender();
     ~MsgSender();
 
-    /*version for windows
+    /*version for linux
      * return 0 if bind successfully
      * else reutrn -1
      */
     int bindSocket(std::string ip, int port);
 
-    /*version for windows
+    /*version for linux
      * return 0 if send successfully
      * else reutrn -1
      */
     int sendMessage(std::string msg);
 
-    /*version for windows
+    /*version for linux
      * return 0 if send successfully
      * else reutrn -1
      */

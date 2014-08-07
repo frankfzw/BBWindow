@@ -7,7 +7,6 @@
 #include <vlc-qt/MediaPlayer.h>
 
 #include <mutex>
-#include <windows.h>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
