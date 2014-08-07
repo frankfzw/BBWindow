@@ -24,3 +24,6 @@ How to Run it in Windows
    Copy the libraries(all *.dll) and plugins directory from your vlc download into the build folder.
 
 5. Run your project, good luck!
+
+Reference: 
+http://derekmolloy.ie/custom-video-streaming-player-using-libvlc-and-qt/
